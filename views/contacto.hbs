@@ -1,0 +1,48 @@
+
+ <main class="mainproductos">
+       
+
+ <header class="cabecera">
+                <div class="logo">
+                    <img src="./img/Logo 93x79.png" alt="logo banner web">
+                </div>
+            <nav class="navegacion">
+                <a href="/" class="link">Inicio</a>
+                <a href="/productos" class="link">Producto</a>
+                <a href="/nosotros" class="link">Nosotros</a>
+                <a href="/contacto" class="link">Contacto</a>
+               
+                <a href="/iniciarsecion" class="link">Configuración</a>
+                </nav>
+                </header>
+                </main>
+
+
+<div class="contenedor7">
+
+
+<div class="container titlecontactos">
+    <hr>
+    <h1 class="title">
+        {{titulo}} se pondra en contacto contigo. 
+    </h1>
+    <hr>
+</div>
+
+<div class="containercontacto m-5">
+    <form action="/contacto" method="post">
+        <div class="mb-3">
+            <label for="nombre" class="form-label">Nombre</label>
+            <input type="text" class="form-control" id="nombre" name="nombre" required>
+        </div>
+        <div class="mb-3">
+            <label for="email" class="form-label">EMAIL</label>
+            <input type="email" class="form-control" id="email" name="email" required>
+        </div>
+       
+        <div class="mb-3 text-center">
+            <button type="submit" class="botonenviar">Enviar</button>
+        </div>
+    </form>
+</div>
+</div>

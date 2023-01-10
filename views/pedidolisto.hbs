@@ -1,0 +1,47 @@
+<body>
+    <main class="mainproductos">
+       
+
+ <header class="cabecera">
+                <div class="logo">
+                    <img src="./img/Logo 93x79.png" alt="logo banner web">
+                </div>
+            <nav class="navegacion">
+                <a href="/" class="link">Inicio</a>
+                <a href="/productos" class="link">Producto</a>
+                <a href="/nosotros" class="link">Nosotros</a>
+                <a href="/contacto" class="link">Contacto</a>
+               
+                <a href="/iniciarsecion" class="link">Configuración</a>
+                </nav>
+                </header>
+</main>
+</body>
+
+
+<h2> Estamos preparando su pedido, complete N° y direccion del destinatario.</h2>
+
+<div class="container m-5">
+
+<form action="/pedidolisto" method="post">
+
+       
+       
+       <div class="mb-3">
+            <label for="posicion" class="form-label">Posicion del pedido</label>
+            <input type="text" class="form-control" id="posicion" name="posicion" required>{{!-- required se usa para no dejar que se envie el formulario sin llenar --}}
+        </div>
+
+          <div class="mb-3">
+            <label for="direccion" class="form-label">Ingrese su direccion</label>
+            <input type="text" class="form-control" id="direccion" name="direccion" required>{{!-- required se usa para no dejar que se envie el formulario sin llenar --}}
+        </div> 
+
+
+
+         <div class="mb-3 text-center">
+            <button type="submit" class="btn btn-primary w-75">Enviar</button>
+        {{!-- boton enviar. con color primary y white de 75% --}}
+        </div>
+    </form>
+</div>

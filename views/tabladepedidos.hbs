@@ -1,0 +1,64 @@
+<main class="mainproductos">
+       
+
+ <header class="cabecera">
+                <div class="logo">
+                    <img src="./img/Logo 93x79.png" alt="logo banner web">
+                </div>
+            <nav class="navegacion">
+                <a href="/" class="link">Inicio</a>
+                <a href="/productos" class="link">Producto</a>
+                <a href="/nosotros" class="link">Nosotros</a>
+                <a href="/contacto" class="link">Contacto</a>
+               
+                <a href="/iniciarsecion" class="link">Configuración</a>
+                </nav>
+                </header>
+                </main>
+
+
+
+
+<div class="container titlecontactos">
+    <hr>
+    <h1 class="title">
+        Tabla de pedidos
+    </h1>
+    <hr>
+</div>
+
+<table class="table table-striped container" id="mitabla">
+  <thead>
+    <tr>
+      <th scope="col">id</th> 
+      <th scope="col">Posicion</th>
+      
+     
+      <th scope="col">Direccion</th>
+    </tr>
+  </thead>
+ {{!-- Hago un bucle de HBS --}}
+ 
+  <tbody>
+    
+    {{#each datos}}
+    <tr>
+      <th scope="row">{{ idPedido }}</th>
+      
+      <td>{{ Posicion }}</td>
+     
+      
+      <td>{{ direccion }}</td>
+      
+    </tr>
+   {{/each}}
+  </tbody>
+</table>
+
+ <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
+
+ {{!-- Funcion para tomar los datos del modal --}}
+ {{!-- Usamos jquery para funciones mas sencillas --}}
+
+<script>
+

@@ -1,0 +1,166 @@
+{{!-- tabla desde bootstrap --}}
+<main class="mainproductos">
+       
+
+ <header class="cabecera">
+                <div class="logo">
+                    <img src="./img/Logo 93x79.png" alt="logo banner web">
+                </div>
+            <nav class="navegacion">
+                <a href="/" class="link">Inicio</a>
+                <a href="/productos" class="link">Producto</a>
+                <a href="/nosotros" class="link">Nosotros</a>
+                <a href="/contacto" class="link">Contacto</a>
+               
+                <a href="/iniciarsecion" class="link">Configuración</a>
+                </nav>
+                </header>
+                </main>
+
+
+
+
+<div class="container titlecontactos">
+    <hr>
+    <h1 class="title">
+        Tabla de productos 
+    </h1>
+    <hr>
+</div>
+
+
+
+<table class="table table-striped container" id="mitabla">
+  <thead>
+    <tr>
+      <th scope="col">id</th> 
+      <th scope="col">Posicion</th>
+      <th scope="col">Producto</th>
+      <th scope="col">Descripción</th>
+      <th scope="col">Precio</th>
+    </tr>
+  </thead>
+ {{!-- Hago un bucle de HBS --}}
+ 
+  <tbody>
+    
+    {{#each datos}}
+    <tr>
+      <th scope="row">{{ idProducto }}</th>
+      
+      <td>{{ Posicion }}</td>
+      <td>{{ nombre }}</td>
+      <td>{{ descripcion }}</td>
+      <td>{{ precio }}</td>
+      <td>
+         <a href="javascript:void(0);" class="btn btn-danger delete" data-idProducto="{{ idProducto }}">Delete</a>
+            {{!-- cuando le damos click a update llama a nombre precio y descripcion desdpues lo colocamos en el modal --}}
+            <a href="javascript:void(0);" class="btn btn-primary edit" data-idProducto="{{ idProducto }}"data-posicion="{{posicion}}"
+            data-nombre="{{ nombre }}" data-precio="{{ precio }}" data-descripcion="{{ descripcion }}">Update</a>
+      </td>
+    </tr>
+   {{/each}}
+  </tbody>
+</table>
+
+
+ {{!-- modal para el Delete --}}   
+ {{!-- copiamos el modal de bootstrap --}}
+<form action="/delete" method="post">{{!-- colocamos el modal dentro de un form para llamarlo desde la aplicacion desde la clase delete
+y creamos el post en la pagina index.js --}}
+<div class="modal" id="DeleteModal" role="dialog" tabindex="-1">{{!-- creamos un id delete y role de dialogo --}}
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Eliminar Producto</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <p>Estas seguro de eliminar el producto</p>
+      </div>
+      <div class="modal-footer">
+        <input type="number" name="idProducto" id="idProducto" class="idProducto" required>{{!-- creamos un input para que tome cada id --}}
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        <button type="submit" class="btn btn-danger">Delete</button>
+      </div>
+    </div>
+  </div>
+</div>
+</form>
+
+
+{{!-- modal para el Update --}}
+
+<form action="/update" method="post">{{!-- colocamos el modal dentro de un form para llamarlo desde la aplicacion desde la clase delete
+y creamos el post en la pagina index.js --}}
+<div class="modal fade" id="EditModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="exampleModalLabel">Editar Producto</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <div class="mb-3">
+            <label for="posicion" class="col-form-label">Posicion: </label>
+            <input type="number" class="form-control posicion" id="posicion" name="posicion">
+          </div>
+          <div class="mb-3">
+            <label for="nombre" class="col-form-label">Nombre: </label>
+            <input type="text" class="form-control nombre" id="nombre" name="nombre">
+          </div>
+          <div class="mb-3">
+            <label for="precio" class="col-form-label">Precio: </label>
+            <input type="number" class="form-control precio" id="precio" name="precio">
+          </div>
+          <div class="mb-3">
+            <label for="descripcion" class="col-form-label">Descripcion: </label>
+            <input type="text" class="form-control descripcion" id="descripcion" name="descripcion">
+          </div>
+          
+      </div>
+      <div class="modal-footer">
+        <input type="number" name="idProducto" id="idProducto" class="idProducto" >
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        <button type="submit" class="btn btn-primary">Update</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+</form>
+
+ <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
+
+ {{!-- Funcion para tomar los datos del modal --}}
+ {{!-- Usamos jquery para funciones mas sencillas --}}
+
+<script>
+  
+    $(document).ready(function(){
+        
+  {{!-- modal del delete --}}
+  $('#mitabla').on('click', '.delete', function() {
+    let idProducto = $(this).data('idProducto');
+    $('#DeleteModal').modal('show')
+  })
+
+// modal del Edit. cuando haces click en el boton de edit de mitabla se va a mostrar el edit modal--}}
+ $('#mitabla').on('click', '.edit', function() {
+    let idProducto = $(this).data('idProducto');
+    let posicion = $(this).data('posicion');
+    let nombre = $(this).data('nombre');
+    let descripcion = $(this).data('descripcion');
+    let precio = $(this).data('precio');
+   
+   //Asignamos las variables al modal
+    $('#EditModal').modal('show');
+    $('.posicion').val(posicion);
+    $('.nombre').val(nombre);
+    $('.descripcion').val(descripcion);
+    $('.precio').val(precio);
+  })
+
+
+    })
+    </script>

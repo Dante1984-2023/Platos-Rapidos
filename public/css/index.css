@@ -1,0 +1,487 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+
+
+
+/* Inicio de Pagina principal*/
+
+
+.main{
+    width: 100%;
+    
+}
+
+.contenedor-1{
+    width: 100%;
+    height: 100vh;  /* pantalla completa. altura de ventana */
+    background-image: url(../img/Meat_products_Tomatoes_Onion_Frikadeller_Bacon_574952_1280x853.jpg) ;
+    background-position: center;
+    
+}
+.cabecera{
+    background-color: rgb(10, 2, 2);
+      background:linear-gradient(180deg, rgb(0, 0, 0),rgba(0, 0, 0, 0));  /* Difuminado para la cabecera */
+   
+   width: 100%;
+    height: 100px;
+    display: flex;
+    overflow: hidden;/* CUalquier elemento que sobrepase el tamaño de la cabecera se va a ocultar */
+ 
+
+}
+
+.logo{
+ 
+  width: 20%;
+  padding-left: 100px;
+  display: flex;
+  justify-content: start;
+  align-items: center;
+
+}
+
+.navegacion{
+
+width: 80%;
+display: flex;
+flex-direction: row; /* por defecto trabaja con row. fila. pero el justify-content depende de row o column */
+justify-content: end;/*centra en forma horizontal. pega el contenido al final. A la derecha */
+align-items: center;
+padding-right: 100px;
+}
+
+.link{
+    color: #fff;
+    padding: 70px 30px;/* separa 70px arriba y abajo y 30px a los lados del texto */
+    text-decoration: none;
+    font-size: 24px;
+}
+
+.link:hover{      /* Cuando pasamos el mouse se aplica el efecto. cambio de color */
+    background-color: #f64b3c;
+    color: #fff;
+    
+    
+}
+.banner{
+    width: 100%;
+    height: calc(100vh - 100px);/* calculo de alto de ventana menos los 100px de la cabecera */
+    display: flex;
+    justify-content: start;/* lo pega a la izquierda. comienzo */
+    align-items: center;/* alineacion vertical centrada */
+}
+
+.banner_textos{
+  
+   width: 50%;
+   display: flex;
+   flex-direction: column;
+   padding-left: 100px;
+   color: #fff;
+}
+.banner_textos h1{
+    font-size: 78px;
+}
+.banner_textos p{
+    font-size: 30px;
+    margin: 20px 0 75px 0;
+}
+.banner_textos a{
+    background-color: #f64b3c;
+    width: 50%;
+    padding: 15px 40px;
+    text-decoration: none;
+    text-align: center;
+    font-size: 18px;
+    color: #fff;
+    border-radius: 40px;
+
+
+}
+.banner_textos a:hover{
+    background-color: #fff;
+    color:#f64b3c;
+   
+
+
+}
+/*Inicio Seccion 2*/
+.contenedor-2{
+width: 100%;
+height: 80vh;
+background-color: #f6eedf;
+display: flex;
+flex-direction: row;
+justify-content: center;
+align-items: center;
+}
+.contenedor-2__text{
+    width: 35%;
+
+}
+.contenedor-2__img{
+width: 35%;
+}
+.contenedor-2__text h2{
+    font-size: 48px;
+    color: #f64b3c;
+}
+.contenedor-2__text p{
+    font-size: 20px;
+    margin: 40px 0px;
+    color: #f64b3c;
+}
+.contenedor-2__text a{
+    background-color: #f64b3c;
+    width: 50%;
+    padding: 15px 40px;
+    text-decoration: none;
+    text-align: center;
+    font-size: 18px;
+    color: #fff;
+    border-radius: 40px;
+ 
+}
+
+.contenedor-2__text a:hover{
+    background-color: #fff;
+    color:#f64b3c;
+}
+
+
+/*fin seccion 2*/
+
+
+/*Inicio de seccion 3*/
+.contenedor-3{
+    background-color: #f64b3c;
+width: 100%;
+height: 80vh;
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+}
+.contenedor-3__text{
+    width: 50%;
+   
+    height: 30%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 20px;
+    color: #fff;
+
+}
+.contenedor-3__data{
+    width: 65%;
+    height: 32.5%;
+   
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+
+
+}
+.data{
+    
+    width: 20%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    border: solid #fff 6px;
+    color: #fff;
+
+}
+.contenedor-3__text h2{
+font-size: 48px;
+}
+.contenedor-3__text p{
+font-size: 24px;
+margin: 20px 0;
+text-align: center;
+}
+.data h3{
+font-size:85px ;
+}
+.data p{
+font-size: 25px;
+
+}
+/*Fin de secion 3*/
+/*Inicio de seccion 4*/
+.contenedor-4{
+width: 100%;
+height: 80vh;
+background-color: #f6eedf;
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center; /*centrado horizontalmente*/
+color: #f64b3c;
+}
+.contenedor-4__text{
+
+width: 70%;
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+}
+.contenedor-4__text h2{
+font-size: 48px;
+
+}
+.contenedor-4__text p{
+font-size: 20px;
+    margin: 30px;
+    text-align: center;
+}
+.contenedor-4__fotos{
+ width: 70%;
+
+display: flex;
+flex-direction: row;
+justify-content: space-between;
+align-items: center;
+}
+
+.fotossucursales{
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+margin-top: 50px;
+
+}
+.fotossucursales img{
+border-radius: 15px;
+
+}
+.fotossucursales h3{
+   font-size: 20px;
+    margin: 10px 0;
+
+}
+.fotossucursales p{
+font-size: 18;
+}
+
+
+
+
+
+
+
+/*Fin de seccion 4*/
+
+/*FOOTER*/
+.containerfooter{
+    background-color: #f6eedf;
+}
+
+/*Fin de pagina principal*/
+
+
+/*Comienzo de  pagina productos */
+
+.container1{
+
+    width: 90%;
+    background: #8d8c8c;
+    padding: 10px;
+    background-color: #f6eedf;
+   
+}
+.img{
+    width: 100%;
+    padding: 0px;
+    height: 40vh;
+    
+}
+
+
+.album{
+    display: flex;
+    align-items: center;    
+    justify-content: center;
+    align-content: space-between ;
+    border-radius: 30px;
+    
+    
+    
+}
+.containertituloproducto{
+    
+    background-color: #f64b3c;
+    padding: 20px;
+    border-radius: 30px;
+    color: #fff;
+   
+    
+}
+.mainproductos{
+
+    background-color: black;
+
+}
+
+
+
+.pedido{
+    margin-left: 130px;
+}
+
+.card-text{
+    color:black;
+}
+.pedidoboton{
+   
+    text-align: center;
+}
+
+
+
+.pedido2{
+    border-radius: 20px;
+    background-color: #f64b3c;
+    width: 150px;
+    text-decoration: none;
+
+}
+.pedido2:hover{
+    
+    background-color: #f6eedf;
+    color: #f64b3c;
+   
+    text-decoration: none;
+
+}
+.apedido2{
+    text-decoration: none;
+    color: #fff;
+}
+.apedido2:hover{
+    
+    background-color: #fff;
+    color:#f64b3c;
+    
+    width: 100%;
+
+}
+
+.apedido{
+    text-decoration: none;
+    color: #f64b3c;
+}
+.apedido:hover{
+    text-decoration: none;
+    color: #fff;
+}
+
+
+/*fin de pagina de productos
+/* Comienzo de configuracion */
+
+.iconoconfiguracion{
+    width: 200px;
+    height: 200px;
+}
+/*fin de pagina configuracion*/
+
+
+/*inicio de pagina Contacto*/
+
+.containercontacto{
+    background-color: #816e6a;
+    text-align: center;
+    border-radius: 30px;
+    color: #fff;
+    width: 70%;
+
+  
+  
+  
+}
+.mb-3{
+    margin: 20px 30px;
+}
+.botonenviar{
+   text-decoration: none;
+    width: 200px;
+    border-radius: 20px;
+    background-color: #f64b3c;
+    color: #fff;
+    
+}
+.botonenviar:hover{
+
+    background-color: #fff;
+    color:#f64b3c;
+    
+}
+
+.titlecontactos{
+    margin-top: 50px;
+    background-color: #f64b3c;
+    color: #fff;
+    border-radius: 20px;
+    text-align: center;
+}
+.contenedor7{
+    background-image: url(../img/Hamburger_Tomatoes_French_fries_Knife_Black_576869_1280x853.jpg);
+    background-position: center;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    
+    align-items: center;
+    
+    
+}
+/*fin de pagina Contacto*/
+
+
+/*inicio formulario*/
+
+
+
+.consultatabla{
+    margin-left: 50px ;
+    margin-top: 50px;
+}
+
+.vertabla{
+    
+    width: 150px;
+    height: 40px;
+    background-color: #f64b3c;
+    border-radius: 20px;
+    margin: 20px;
+   
+}
+
+.vertabla a{
+text-decoration: none;
+color: #fff;
+}
+.vertabla:hover{
+    background-color: #fff;
+    color: #f64b3c;
+}
+.vertabla:hover a{
+    background-color: #fff;
+    color: #f64b3c;
+}
+/*fin formulario*/
