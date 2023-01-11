@@ -22,20 +22,10 @@ console.log("Puerto de uso " + process.env.PORT);
 console.log("Puerto de Base de datos  " + process.env.DBPORT);
 
 
-
-
-
 //Middelware
 app.use(express.json());
 app.use(express.urlencoded({extended: true}));
 app.use(express.static(path.join(__dirname, 'public')));  //busca archivos de html, css ,etc
-
-
-
-
-
-
-
 
 
 //Configuramos el motor de plantillas de HBS
@@ -143,8 +133,7 @@ app.post('/formulario', (req,res)=>{
         if (err) throw err;
             console.log('1 registro insertado');      
            
-            res.render('enviado') /* muestra la pagina hbs  despues de insertar un dato.
-            esta pagina debe estar creada 
+            res.render('enviado')  
     })*/
     res.render('sinDatos')
 })
@@ -154,10 +143,10 @@ app.get('/tabladepedidos', (req, res)=>{
    /* let sql = "SELECT * FROM pedido ";   // Se coloca cualquier consulta igual que con workbench
     conexion.query(sql, function(err, result){
         if (err) throw err;
-            //console.log(result);//para la entrega va comentado
+            
             res.render('tabladepedidos',{
                 
-                datos: result   /* el resultado de toda la tabla se guarda en datos        
+                datos: result           
     })   
 
 
@@ -171,10 +160,10 @@ app.get('/pedidouno', (req, res)=>{
    /* let sql = "SELECT * FROM productos where posicion = 1";   // Se coloca cualquier consulta igual que con workbench
         conexion.query(sql, function(err, result){
             if (err) throw err;
-                //console.log(result);//para la entrega va comentado
+                
                 res.render('productos',{
                     titulo: 'Productos',
-                    datos: result   /* el resultado de toda la tabla se guarda en datos         
+                    datos: result            
         })   
     })*/
     res.render('sinDatos')
@@ -184,10 +173,10 @@ app.get('/pedidodos', (req, res)=>{
     /*let sql = "SELECT * FROM productos where posicion = 2";   // Se coloca cualquier consulta igual que con workbench
         conexion.query(sql, function(err, result){
             if (err) throw err;
-                //console.log(result);//para la entrega va comentado
+                
                 res.render('productos',{
                     titulo: 'Productos',
-                    datos: result   /* el resultado de toda la tabla se guarda en datos        
+                    datos: result           
         })   
     })*/
     res.render('sinDatos')
@@ -197,10 +186,10 @@ app.get('/pedidotres', (req, res)=>{
     /*let sql = "SELECT * FROM productos where posicion = 3";   // Se coloca cualquier consulta igual que con workbench
         conexion.query(sql, function(err, result){
             if (err) throw err;
-                //console.log(result);//para la entrega va comentado
+                
                 res.render('productos',{
                     titulo: 'Productos',
-                    datos: result   // el resultado de toda la tabla se guarda en datos       
+                    datos: result          
         })   
     })*/
     res.render('sinDatos')
@@ -210,10 +199,10 @@ app.get('/pedidocuatro', (req, res)=>{
     /*let sql = "SELECT * FROM productos where posicion = 4";   // Se coloca cualquier consulta igual que con workbench
         conexion.query(sql, function(err, result){
             if (err) throw err;
-                //console.log(result);//para la entrega va comentado
+                
                 res.render('productos',{
                     titulo: 'Productos',
-                    datos: result   // el resultado de toda la tabla se guarda en datos       
+                    datos: result          
         })   
     })*/
     res.render('sinDatos')
@@ -222,10 +211,10 @@ app.get('/pedidocinco', (req, res)=>{
    /* let sql = "SELECT * FROM productos where posicion = 5";   // Se coloca cualquier consulta igual que con workbench
         conexion.query(sql, function(err, result){
             if (err) throw err;
-                //console.log(result);//para la entrega va comentado
+                
                 res.render('productos',{
                     titulo: 'Productos',
-                    datos: result   /* el resultado de toda la tabla se guarda en datos         
+                    datos: result          
         })   
     })*/
     res.render('sinDatos')
@@ -234,10 +223,10 @@ app.get('/pedidoseis', (req, res)=>{
     /*let sql = "SELECT * FROM productos where posicion = 6";   // Se coloca cualquier consulta igual que con workbench
         conexion.query(sql, function(err, result){
             if (err) throw err;
-                //console.log(result);//para la entrega va comentado
+                
                 res.render('productos',{
                     titulo: 'Productos',
-                    datos: result   // el resultado de toda la tabla se guarda en datos        
+                    datos: result           
         })   
     })*/
     res.render('sinDatos')
@@ -247,10 +236,10 @@ app.get('/pedidosiete', (req, res)=>{
    /* let sql = "SELECT * FROM productos where posicion = 7";   // Se coloca cualquier consulta igual que con workbench
         conexion.query(sql, function(err, result){
             if (err) throw err;
-                //console.log(result);//para la entrega va comentado
+                
                 res.render('productos',{
                     titulo: 'Productos',
-                    datos: result   /* el resultado de toda la tabla se guarda en datos         
+                    datos: result            
         })   
     })*/
     res.render('sinDatos')
@@ -259,10 +248,9 @@ app.get('/pedidoocho', (req, res)=>{
     /*let sql = "SELECT * FROM productos where posicion = 8";   // Se coloca cualquier consulta igual que con workbench
         conexion.query(sql, function(err, result){
             if (err) throw err;
-                //console.log(result);//para la entrega va comentado
                 res.render('productos',{
                     titulo: 'Productos',
-                    datos: result   /* el resultado de toda la tabla se guarda en datos         
+                    datos: result            
         })   
     })*/
     res.render('sinDatos')
@@ -271,10 +259,10 @@ app.get('/pedidonueve', (req, res)=>{
    /* let sql = "SELECT * FROM productos where posicion = 9";   // Se coloca cualquier consulta igual que con workbench
         conexion.query(sql, function(err, result){
             if (err) throw err;
-                //console.log(result);//para la entrega va comentado
+               
                 res.render('productos',{
                     titulo: 'Productos',
-                    datos: result   /* el resultado de toda la tabla se guarda en datos        
+                    datos: result           
         })   
     })*/
     res.render('sinDatos')
@@ -307,8 +295,7 @@ app.post('/pedidolisto', (req,res)=>{
         if (err) throw err;
             console.log('1 registro insertado');      
             
-            res.render('enviado') /* muestra la pagina hbs  despues de insertar un dato.
-            esta pagina debe estar creada 
+            res.render('enviado') 
     })*/
     
 })
@@ -320,10 +307,10 @@ app.post('/pedidolisto', (req,res)=>{
        /* let sql = "SELECT * FROM productos";   // Se coloca cualquier consulta igual que con workbench
             conexion.query(sql, function(err, result){
                 if (err) throw err;
-                    //console.log(result);//para la entrega va comentado
+                   
                     res.render('tabladeproductos',{
                         titulo: 'Productos',
-                        datos: result   /* el resultado de toda la tabla se guarda en datos         
+                        datos: result           
             })   
         })*/
         res.render('sinDatos')
@@ -457,7 +444,7 @@ conexion.query(sql, datos, function(err){
         envioMail().catch(console.error);// envio correo si insetaron bien los datos
         res.render('enviado')
     })*/
-     // res.send('Los datos fueron recibidos')// mensaje en la pagina 
+    
 
     res.json({
         prueba: 'Sin conexion a Database'
