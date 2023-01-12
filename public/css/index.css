@@ -394,8 +394,8 @@ font-size: 18;
 /* Comienzo de configuracion */
 
 .iconoconfiguracion{
-    width: 200px;
-    height: 200px;
+    width: 100px;
+    height: 100px;
 }
 /*fin de pagina configuracion*/
 
@@ -439,8 +439,10 @@ font-size: 18;
     text-align: center;
 }
 .contenedor7{
-    background-image: url(../img/Hamburger_Tomatoes_French_fries_Knife_Black_576869_1280x853.jpg);
-    background-position: center;
+    /*  background-image: url(../img/Hamburger_Tomatoes_French_fries_Knife_Black_576869_1280x853.jpg);
+  */  
+    background-color: black;
+  background-position: center;
     width: 100%;
     height: 100vh;
     display: flex;
@@ -485,3 +487,18 @@ color: #fff;
     color: #f64b3c;
 }
 /*fin formulario*/
+
+/*pedidolisto*/
+
+
+.titulopedidolisto{
+    text-align: center;
+    margin-top:20px;
+  }
+  
+.mb-3a{
+    color: #fff
+  }
+  
+  /*fin pedidolisto*/
+  

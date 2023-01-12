@@ -22,6 +22,7 @@ console.log("Puerto de uso " + process.env.PORT);
 console.log("Puerto de Base de datos  " + process.env.DBPORT);
 
 
+
 //Middelware
 app.use(express.json());
 app.use(express.urlencoded({extended: true}));
@@ -452,6 +453,7 @@ conexion.query(sql, datos, function(err){
 
 
 })
+
 
 
 
