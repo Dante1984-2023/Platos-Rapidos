@@ -233,6 +233,7 @@ app.get('/pedidoseis', (req, res)=>{
     res.render('sinDatos')
 })
 
+
 app.get('/pedidosiete', (req, res)=>{
    /* let sql = "SELECT * FROM productos where posicion = 7";   // Se coloca cualquier consulta igual que con workbench
         conexion.query(sql, function(err, result){
